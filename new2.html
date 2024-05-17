@@ -4,10 +4,60 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Karnataka Tourism</title>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+   
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <style>
+#contact {
+      padding: 80px 0;
+      background-color: #007bff;
+    }
+
+    .line {
+      width: 40px;
+      height: 2px;
+      background-color: #007bff;
+      margin-bottom: 20px;
+    }
+
+    .cform {
+      margin-bottom: 30px;
+    }
+
+    .cbox {
+      background-color: #007bff;
+      padding: 20px;
+      border-radius: 10px;
+      color: #fff;
+    }
+    /* Add this CSS block to apply black shadow for main headings */
+h2{
+  text-shadow: 1px 1px 3px rgba(0, 0, 255, 0.5);}
+
+    .c_boxx {
+      margin-bottom: 15px;
+    }
+
+    .c_boxx a {
+      color: #fff;
+      text-decoration: none;
+    }
+
+    .c_boxx a:hover {
+      text-decoration: underline;
+    }
+    .district-section {
+            display: none;
+        }
+        .form-group {
+            margin-bottom: 0.5rem;
+        }
+
+        .form-control {
+            height: calc(1.5em + 0.5rem + 2px);
+            padding: 0.25rem 0.5rem;
+            font-size: 0.875rem;
+        }    
     .carousel-item img {
       width: 100%;
       height: 400px;
@@ -25,11 +75,15 @@
       display: none;
     }
   </style>
+  
 </head>
 <body>
 
-<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-  <a class="navbar-brand" href="#">Karnataka Tourism</a>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <a class="navbar-brand" href="#">
+      <img src="kf.jpg" alt="Logo" style="width: 60px; height: 60px; border-radius: 50%; margin-right: 10px; border: 2px solid white;">
+      <span style="font-size: 30px;font-weight: bold; font-family: Verdana, Geneva, Tahoma, sans-serif;">KARNATAKA TOURISM</span>
+    </a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -49,24 +103,24 @@
 </nav>
 
 <div id="home" class="container-fluid">
-  <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+  <div id="carouselExampleControls" class="carousel slide carousel-fade" data-ride="carousel">
     <div class="carousel-inner">
       <div class="carousel-item active">
-        <img src="https://via.placeholder.com/800x400" class="d-block w-100" alt="...">
-        <div class="carousel-caption">
-          <h5>Image 1 description</h5>
+        <img src="https://scontent.cdninstagram.com/v/t51.29350-15/432476707_671867358305837_3785713169777276950_n.heic?stp=dst-jpg&_nc_cat=102&ccb=1-7&_nc_sid=18de74&_nc_ohc=PKWbMCWewZ4Q7kNvgHTxv2x&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.cdninstagram.com&oh=00_AYDjQPi1Dz54esgL-xSOGLgbeU1YyCVLbs1v4bqJVI21vA&oe=6648B8D4" class="d-block w-100" alt="...">
+        <div class="carousel-caption text-white d-none d-md-block">
+          <h5 style="display: inline; margin: 0px auto 0px auto;padding:5px;font-size:25px;background-color:rgba(0, 0, 0, 0.5);" >Badami Cave Temples</h5>
         </div>
       </div>
       <div class="carousel-item">
-        <img src="https://via.placeholder.com/800x400" class="d-block w-100" alt="...">
-        <div class="carousel-caption">
-          <h5>Image 2 description</h5>
+        <img src="https://scontent.cdninstagram.com/v/t51.29350-15/434048415_3474042392893837_1675479964076529115_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=18de74&_nc_ohc=NUP48XInZyYQ7kNvgEVq3i4&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.cdninstagram.com&oh=00_AYBANfWzEBJ6RAO4EXk4GUEiCGSVsU_TrVvdot5hEaUXFA&oe=6648D04E" class="d-block w-100" alt="...">
+        <div class="carousel-caption text-white d-none d-md-block">
+          <h5 style="display: inline; margin: 0px auto 0px auto;padding:5px;font-size:25px;background-color:rgba(0, 0, 0, 0.5);" >Muniyal, Udupi, Karnataka.</h5>
         </div>
       </div>
       <div class="carousel-item">
-        <img src="https://via.placeholder.com/800x400" class="d-block w-100" alt="...">
-        <div class="carousel-caption">
-          <h5>Image 3 description</h5>
+        <img src="https://scontent.cdninstagram.com/v/t51.29350-15/417179248_926625292801252_3250519240453191310_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=18de74&_nc_ohc=s6Yepbs-tP0Q7kNvgFtcFay&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.cdninstagram.com&oh=00_AYBbmELqpu2xJV_b_RQvoxPX3-OZl2LTVBqUhz6sjz9KfA&oe=6648E6C2" class="d-block w-100" alt="...">
+        <div class="carousel-caption text-white d-none d-md-block">
+          <h5 style="display: inline; margin: 0px auto 0px auto;padding:5px;font-size:25px;background-color:rgba(0, 0, 0, 0.5);">Chennakeshava Temple,Belur</h5>
         </div>
       </div>
     </div>
@@ -81,74 +135,166 @@
   </div>
 </div>
 
+
 <div class="container mt-5">
-  <div class="dropdown">
-    <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-      Select District
-    </button>
-    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-      <a class="dropdown-item" href="#bagalkot">Bagalkot</a>
-      <a class="dropdown-item" href="#bengaluru_rural">Bengaluru Rural</a>
-      <a class="dropdown-item" href="#bengaluru_urban">Bengaluru Urban</a>
-      <a class="dropdown-item" href="#belagavi">Belagavi</a>
-      <a class="dropdown-item" href="#bellary">Bellary</a>
-      <a class="dropdown-item" href="#bidar">Bidar</a>
-      <a class="dropdown-item" href="#chamarajanagar">Chamarajanagar</a>
-      <a class="dropdown-item" href="#chikkaballapur">Chikkaballapur</a>
-      <a class="dropdown-item" href="#chikkamagaluru">Chikkamagaluru</a>
-      <a class="dropdown-item" href="#chitradurga">Chitradurga</a>
-      <a class="dropdown-item" href="#dakshina_kannada">Dakshina Kannada</a>
-      <a class="dropdown-item" href="#davanagere">Davanagere</a>
-      <a class="dropdown-item" href="#dharwad">Dharwad</a>
-      <a class="dropdown-item" href="#gadag">Gadag</a>
-      <a class="dropdown-item" href="#hassan">Hassan</a>
-      <a class="dropdown-item" href="#haveri">Haveri</a>
-      <a class="dropdown-item" href="#kalaburagi">Kalaburagi</a>
-      <a class="dropdown-item" href="#kodagu">Kodagu</a>
-      <a class="dropdown-item" href="#kolar">Kolar</a>
-      <a class="dropdown-item" href="#koppal">Koppal</a>
-      <a class="dropdown-item" href="#mandya">Mandya</a>
-      <a class="dropdown-item" href="#mysuru">Mysuru</a>
-      <a class="dropdown-item" href="#raichur">Raichur</a>
-      <a class="dropdown-item" href="#ramanagara">Ramanagara</a>
-      <a class="dropdown-item" href="#shivamogga">Shivamogga</a>
-      <a class="dropdown-item" href="#tumakuru">Tumakuru</a>
-      <a class="dropdown-item" href="#udupi">Udupi</a>
-      <a class="dropdown-item" href="#uttara_kannada">Uttara Kannada</a>
-      <a class="dropdown-item" href="#vijayapura">Vijayapura</a>
-      <a class="dropdown-item" href="#yadgir">Yadgir</a>
-    </div>
+  <h2 class="mb-4 text-primary"><center>TRAVEL DESTINATIONS</center></h2>
+  <div class="form-group">
+      <label for="district">Select a District:</label>
+      <select id="district" class="form-control">
+          <option value="">-- Select District --</option>
+          <option value="Bangalore Urban">Bangalore Urban</option>
+          <option value="Belagavi">Belagavi</option>
+          <option value="Bellary">Bellary</option>
+          <option value="Bidar">Bidar</option>
+          <option value="Chamarajanagar">Chamarajanagar</option>
+          <option value="Chikkaballapur">Chikkaballapur</option>
+          <option value="Chikkamagaluru">Chikkamagaluru</option>
+          <option value="Chitradurga">Chitradurga</option>
+          <option value="Dakshina Kannada">Dakshina Kannada</option>
+          <option value="Davanagere">Davanagere</option>
+          <option value="Dharwad">Dharwad</option>
+          <option value="Gadag">Gadag</option>
+          <option value="Gulbarga">Gulbarga</option>
+          <option value="Hassan">Hassan</option>
+          <option value="Haveri">Haveri</option>
+          <option value="Kodagu">Kodagu</option>
+          <option value="Kolar">Kolar</option>
+          <option value="Koppal">Koppal</option>
+          <option value="Mandya">Mandya</option>
+          <option value="Mysore">Mysore</option>
+          <option value="Raichur">Raichur</option>
+          <option value="Ramanagara">Ramanagara</option>
+          <option value="Shimoga">Shimoga</option>
+          <option value="Tumkur">Tumkur</option>
+          <option value="Udupi">Udupi</option>
+          <option value="Uttara Kannada">Uttara Kannada</option>
+          <option value="Vijayanagara">Vijayanagara</option>
+          <option value="Yadgir">Yadgir</option>
+      </select>
   </div>
+  
+  <div id="BangaloreUrban" class="district-section">
+    <h2 class="mt-4">Famous Places in Bangalore Urban:</h2>
+    <ul id="BangaloreUrban-places" class="list-unstyled"></ul>
 </div>
-
-<div id="bagalkot" class="district-section container mt-5">
-  <h2 class="text-center mb-4">Bagalkot</h2>
-  <p>Main tourism places in Bagalkot...</p>
+<div id="Belagavi" class="district-section">
+    <h2 class="mt-4">Famous Places in Belagavi:</h2>
+    <ul id="Belagavi-places" class="list-unstyled"></ul>
 </div>
-
-<div id="bengaluru_rural" class="district-section container mt-5">
-  <h2 class="text-center mb-4">Bengaluru Rural</h2>
-  <p>Main tourism places in Bengaluru Rural...</p>
+<div id="Bellary" class="district-section">
+    <h2 class="mt-4">Famous Places in Bellary:</h2>
+    <ul id="Bellary-places" class="list-unstyled"></ul>
 </div>
-
-<div id="bengaluru_urban" class="district-section container mt-5">
-  <h2 class="text-center mb-4">Bengaluru Urban</h2>
-  <p>Main tourism places in Bengaluru Urban...</p>
+<div id="Bidar" class="district-section">
+    <h2 class="mt-4">Famous Places in Bidar:</h2>
+    <ul id="Bidar-places" class="list-unstyled"></ul>
 </div>
-
-<div id="belagavi" class="district-section container mt-5">
-  <h2 class="text-center mb-4">Belagavi</h2>
-  <p>Main tourism places in Belagavi...</p>
+<div id="Chamarajanagar" class="district-section">
+    <h2 class="mt-4">Famous Places in Chamarajanagar:</h2>
+    <ul id="Chamarajanagar-places" class="list-unstyled"></ul>
+</div>
+<div id="Chikkaballapur" class="district-section">
+    <h2 class="mt-4">Famous Places in Chikkaballapur:</h2>
+    <ul id="Chikkaballapur-places" class="list-unstyled"></ul>
+</div>
+<div id="Chikkamagaluru" class="district-section">
+    <h2 class="mt-4">Famous Places in Chikkamagaluru:</h2>
+    <ul id="Chikkamagaluru-places" class="list-unstyled"></ul>
+</div>
+<div id="Chitradurga" class="district-section">
+    <h2 class="mt-4">Famous Places in Chitradurga:</h2>
+    <ul id="Chitradurga-places" class="list-unstyled"></ul>
+</div>
+<div id="DakshinaKannada" class="district-section">
+    <h2 class="mt-4">Famous Places in Dakshina Kannada:</h2>
+    <ul id="DakshinaKannada-places" class="list-unstyled"></ul>
+</div>
+<div id="Davanagere" class="district-section">
+    <h2 class="mt-4">Famous Places in Davanagere:</h2>
+    <ul id="Davanagere-places" class="list-unstyled"></ul>
+</div>
+<div id="Dharwad" class="district-section">
+    <h2 class="mt-4">Famous Places in Dharwad:</h2>
+    <ul id="Dharwad-places" class="list-unstyled"></ul>
+</div>
+<div id="Gadag" class="district-section">
+    <h2 class="mt-4">Famous Places in Gadag:</h2>
+    <ul id="Gadag-places" class="list-unstyled"></ul>
+</div>
+<div id="Gulbarga" class="district-section">
+    <h2 class="mt-4">Famous Places in Gulbarga:</h2>
+    <ul id="Gulbarga-places" class="list-unstyled"></ul>
+</div>
+<div id="Hassan" class="district-section">
+    <h2 class="mt-4">Famous Places in Hassan:</h2>
+    <ul id="Hassan-places" class="list-unstyled"></ul>
+</div>
+<div id="Haveri" class="district-section">
+    <h2 class="mt-4">Famous Places in Haveri:</h2>
+    <ul id="Haveri-places" class="list-unstyled"></ul>
+</div>
+<div id="Kodagu" class="district-section">
+    <h2 class="mt-4">Famous Places in Kodagu:</h2>
+    <ul id="Kodagu-places" class="list-unstyled"></ul>
+</div>
+<div id="Kolar" class="district-section">
+    <h2 class="mt-4">Famous Places in Kolar:</h2>
+    <ul id="Kolar-places" class="list-unstyled"></ul>
+</div>
+<div id="Koppal" class="district-section">
+    <h2 class="mt-4">Famous Places in Koppal:</h2>
+    <ul id="Koppal-places" class="list-unstyled"></ul>
+</div>
+<div id="Mandya" class="district-section">
+    <h2 class="mt-4">Famous Places in Mandya:</h2>
+    <ul id="Mandya-places" class="list-unstyled"></ul>
+</div>
+<div id="Mysore" class="district-section">
+    <h2 class="mt-4">Famous Places in Mysore:</h2>
+    <ul id="Mysore-places" class="list-unstyled"></ul>
+</div>
+<div id="Raichur" class="district-section">
+    <h2 class="mt-4">Famous Places in Raichur:</h2>
+    <ul id="Raichur-places" class="list-unstyled"></ul>
+</div>
+<div id="Ramanagara" class="district-section">
+    <h2 class="mt-4">Famous Places in Ramanagara:</h2>
+    <ul id="Ramanagara-places" class="list-unstyled"></ul>
+</div>
+<div id="Shimoga" class="district-section">
+    <h2 class="mt-4">Famous Places in Shimoga:</h2>
+    <ul id="Shimoga-places" class="list-unstyled"></ul>
+</div>
+<div id="Tumkur" class="district-section">
+    <h2 class="mt-4">Famous Places in Tumkur:</h2>
+    <ul id="Tumkur-places" class="list-unstyled"></ul>
+</div>
+<div id="Udupi" class="district-section">
+    <h2 class="mt-4">Famous Places in Udupi:</h2>
+    <ul id="Udupi-places" class="list-unstyled"></ul>
+</div>
+<div id="UttaraKannada" class="district-section">
+    <h2 class="mt-4">Famous Places in Uttara Kannada:</h2>
+    <ul id="UttaraKannada-places" class="list-unstyled"></ul>
+</div>
+<div id="Vijayanagara" class="district-section">
+    <h2 class="mt-4">Famous Places in Vijayanagara:</h2>
+    <ul id="Vijayanagara-places" class="list-unstyled"></ul>
+</div>
+<div id="Yadgir" class="district-section">
+    <h2 class="mt-4">Famous Places in Yadgir:</h2>
+    <ul id="Yadgir-places" class="list-unstyled"></ul>
+</div>
 </div>
 
 <!-- Add other district sections here -->
 
 <div id="explore" class="container mt-5">
-  <h2 class="text-center mb-4">Explore</h2>
+  <h2 class="text-center mb-4 text-primary t">EXPLORE</h2>
   <div class="row">
     <div class="col-md-6">
       <div class="card">
-        <img src="https://via.placeholder.com/400x200" class="card-img-top" alt="...">
+        <img src="https://scontent-tir3-2.cdninstagram.com/v/t51.29350-15/433069918_689267966494485_4414519177810031467_n.heic?stp=dst-jpg&_nc_cat=105&ccb=1-7&_nc_sid=18de74&_nc_ohc=_NKM7w8VRUQQ7kNvgGjGUL5&_nc_ht=scontent-tir3-2.cdninstagram.com&oh=00_AYDQ1DasV3XVzKVDZR6by9Rq6aJ2riExdS5aT_voMO0n5w&oe=664B7376" class="card-img-top" alt="..." style="height: 447px;" >
         <div class="card-body">
           <h5 class="card-title">Wildlife</h5>
           <p class="card-text">Explore Karnataka's diverse wildlife.</p>
@@ -158,7 +304,7 @@
     </div>
     <div class="col-md-6">
       <div class="card">
-        <img src="https://via.placeholder.com/400x200" class="card-img-top" alt="...">
+        <img src="https://scontent-tir3-2.cdninstagram.com/v/t51.29350-15/440879281_7567110690020922_6576578870144914464_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=18de74&_nc_ohc=IYNJ_k-w9L8Q7kNvgEZLYN3&_nc_ht=scontent-tir3-2.cdninstagram.com&oh=00_AYCLKg8QhZbGqTGf2cNaBp7BhCUwMGU1hi39UIpBS2FaBg&oe=664B8EA8" class="card-img-top" alt="...">
         <div class="card-body">
           <h5 class="card-title">Historical Places</h5>
           <p class="card-text">Explore Karnataka's rich historical places.</p>
@@ -170,7 +316,7 @@
 </div>
 
 <div id="wildlife" class="explore-details container mt-5">
-  <h2 class="text-center mb-4">Wildlife</h2>
+  <h2 class="text-center mb-4 text-primary">WILDLIFE</h2>
   <div class="explore-images row">
     <div class="col-md-4">
       <img src="https://via.placeholder.com/400x300" alt="Wildlife 1">
@@ -187,8 +333,9 @@
   </div>
 </div>
 
-<div id="historical-places" class="explore-details container mt-5">
-  <h2 class="text-center mb-4">Historical Places</h2>
+<div id="historical-places" class="explore-details container mt-5  ">
+  <h2 class="text-center mb-4 text-primary" >HISTORICAL PLACES</h2>
+  
   <div class="explore-images row">
     <div class="col-md-4">
       <img src="https://via.placeholder.com/400x300" alt="Historical Place 1">
@@ -205,14 +352,54 @@
   </div>
 </div>
 
-<div id="contact" class="container mt-5">
-  <h2 class="text-center mb-4">Contact Us</h2>
-  <p class="text-center">Contact information goes here...</p>
-</div>
+<section id="contact">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+        <div class="text-center mb-5">
+          <h2 class="font-weight-bold text-white">CONTACT US</h2>
+          <div class="line bg-white mx-auto mb-4"></div>
+          <p class=" text-white" >We'd love to hear from you! Reach out to us using the form or contact details below.</p>
+        </div>
+        <div ng-app="tourismApp" ng-controller="contactController">
+          <form name="cform" ng-submit="submitForm()" novalidate>
+            <div class="form-group">
+              <label for="name" class="text-white">Name:</label>
+              <input type="text" id="name" class="form-control" ng-model="formData.name" required>
+            </div>
+            <div class="form-group">
+              <label for="email" class="text-white">Email:</label>
+              <input type="email" id="email" class="form-control" ng-model="formData.email" required>
+            </div>
+            <div class="form-group">
+              <label for="message" class="text-white">Message:</label>
+              <textarea id="message" class="form-control" rows="4" ng-model="formData.message" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+
+          <!-- Show submitted data -->
+          <div ng-show="formDataSubmitted">
+            <h3 class="mt-4 text-white">Submitted Form Data:</h3>
+            <p class="text-white">Name: {{ formData.name }}</p>
+            <p class="text-white">Email: {{ formData.email }}</p>
+            <p class="text-white">Message: {{ formData.message }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</section>
+
+
+
 
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 <script>
   $(document).ready(function(){
     $('#carouselExampleControls').on('slid.bs.carousel', function () {
@@ -230,13 +417,89 @@
     $('a[href="#home"]').click(function(){
       $('.explore-details').hide();
       $('.district-section').hide();
+      $('.item-details').hide();
     });
 
-    $('.dropdown-item').click(function(){
-      var district = $(this).attr('href');
-      $('.district-section').hide();
-      $(district).show();
-    });
+    
+  });
+ 
+
+  const places = {
+            "Bangalore Urban": ["Bangalore Palace", "Vidhana Soudha", "Cubbon Park", "Lalbagh Botanical Garden"],
+            "Belagavi": ["Belgaum Fort", "Kittur Fort", "Gokak Falls", "Safa Masjid"],
+            "Bellary": ["Hampi", "Bellary Fort", "Vijayanagara", "Hemakuta Hill"],
+            "Bidar": ["Bidar Fort", "Guru Nanak Jhira Sahib", "Rangeen Mahal", "Bahmani Tombs"],
+            "Chamarajanagar": ["Biligiri Rangaswamy Temple (B R Hills)", "Chamarajanagar Fort", "Gopalaswamy Betta", "M M Hills"],
+            "Chikkaballapur": ["Nandi Hills", "Bhoga Nandeeshwara Temple", "Skandagiri", "Muddenahalli"],
+            "Chikkamagaluru": ["Mullayanagiri", "Kudremukh National Park", "Baba Budangiri", "Kemmanagundi"],
+            "Chitradurga": ["Chitradurga Fort", "Vani Vilas Sagar Dam", "Chandravalli", "Hidimbeshwara Temple"],
+            "Dakshina Kannada": ["Mangalore Beach", "Ullal Beach", "Kadri Manjunath Temple", "Tannirbhavi Beach"],
+            "Davanagere": ["Anekonda", "Haralahalli", "Panchalingeshwara Temple", "Bheemasamudra"],
+            "Dharwad": ["Dharwad Fort", "Kala Bhairava Temple", "Sykes Point", "Unkal Lake"],
+            "Gadag": ["Lakkundi", "Dambal", "Veera Narayana Temple", "Naregal"],
+            "Gulbarga": ["Gulbarga Fort", "Khaja Bande Nawaz Dargah", "Sharanabasaveshwara Temple", "Sharana Basaveshwara Temple"],
+            "Hassan": ["Belur", "Halebidu", "Shravanabelagola", "Hoysaleswara Temple"],
+            "Haveri": ["Haveri Fort", "Akki Alur", "Brahmeswara Temple", "Galaganatha Temple"],
+            "Kodagu": ["Madikeri Fort", "Raja's Seat", "Abbey Falls", "Talakaveri"],
+            "Kolar": ["Antharagange", "Kolaramma Temple", "Kurudumale", "Avani"],
+            "Koppal": ["Koppal Fort", "Anegundi", "Kuknur", "Itagi Bhimambika"],
+            "Mandya": ["Srirangapatna", "KRS Dam", "Gaganachukki and Bharachukki Falls", "Melkote"],
+            "Mysore": ["Mysore Palace", "Brindavan Gardens", "Chamundi Hill", "Mysore Zoo"],
+            "Raichur": ["Raichur Fort", "Ek Minar Ki Masjid", "Ek Minar Ki Masjid", "Markandeshwara Temple"],
+            "Ramanagara": ["Ramadevara Betta", "Janapada Loka", "Sholay Shooting Hilltop", "Kanva Reservoir"],
+            "Shimoga": ["Jog Falls", "Kodachadri", "Tunga Anicut Dam", "Kavaledurga Fort"],
+            "Tumkur": ["Devarayanadurga", "Siddaganga Mutt", "Yediyur Siddhalingeshwara Temple", "Namada Chilume"],
+            "Udupi": ["Udupi Sri Krishna Matha", "St. Mary's Islands", "Malpe Beach", "Kapu Beach"],
+            "Uttara Kannada": ["Gokarna Beach", "Yana", "Karwar Beach", "Dandeli Wildlife Sanctuary"],
+            "Vijayanagara": ["Hampi", "Vittala Temple", "Virupaksha Temple", "Lotus Palace"],
+            "Yadgir": ["Shorapur Fort", "Basavakalyana Fort", "Ghattargi Bhagyavanti Temple", "Narasimha Jhira Cave Temple"]
+        };
+
+        const districtSelect = document.getElementById('district');
+        const districtSections = document.querySelectorAll('.district-section');
+
+        districtSelect.addEventListener('change', (event) => {
+            const district = event.target.value;
+            const selectedDistrictSection = document.getElementById(district.replace(/ /g, ''));
+            const districtPlaces = places[district];
+
+            districtSections.forEach(section => {
+                section.style.display = 'none';
+            });
+
+            if (districtPlaces) {
+                const placesList = document.createElement('ul');
+                districtPlaces.forEach(place => {
+                    const listItem = document.createElement('li');
+                    const anchor = document.createElement('a');
+                    anchor.href = '#';
+                    anchor.textContent = place;
+                    listItem.appendChild(anchor);
+                    placesList.appendChild(listItem);
+                });
+                selectedDistrictSection.style.display = 'block';
+                const placesDiv = document.getElementById(${district.replace(/ /g, '')}-places);
+                placesDiv.innerHTML = '';
+                placesDiv.appendChild(placesList);
+            }
+        });
+</script>
+<footer class="footer bg-dark text-white text-center py-3">
+  <div class="container">
+    <p>&copy; 2024 Karnataka Tourism. All rights reserved.</p>
+  </div>
+</footer>
+<script>
+  var app = angular.module('tourismApp', []);
+
+  app.controller('contactController', function($scope) {
+    $scope.formData = {};
+
+    $scope.submitForm = function() {
+      if ($scope.cform.$valid) {
+        $scope.formDataSubmitted = true;
+      }
+    };
   });
 </script>
 </body>
